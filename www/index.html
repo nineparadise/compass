@@ -98,7 +98,11 @@
     function onSuccess(heading) {
        
        deg = heading.magneticHeading;
-	$("#rtobj").rotate(deg);
+  	var arrowOrientation = 360 - heading.magneticHeading;
+       $("#rtobj").css(
+           '-webkit-transform','rotate(' + arrowOrientation + 'deg)'
+       );
+	
     }
 
     // onError: Failed to get the heading
