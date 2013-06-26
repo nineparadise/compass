@@ -96,5 +96,3 @@
     -->
 
 </widget>
-<plugin>
-<plugin name="Compass" value="org.apache.cordova.CompassListener" /></plugin>
