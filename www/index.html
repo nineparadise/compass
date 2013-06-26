@@ -73,9 +73,9 @@
 	var deg=null;
    	var watchID = null;
 	
-startWatch();
+	startWatch();
     
-      
+      $("p.txt").html("work");
     
 
     // Start watching the compass
@@ -83,7 +83,7 @@ startWatch();
     function startWatch() {
 
         // Update compass every 3 seconds
-        var options = { frequency: 100 };
+        var options = { frequency: 500 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
     }
@@ -103,7 +103,7 @@ startWatch();
        
        deg = heading.magneticHeading;
   	var arrowOrientation = 360 - heading.magneticHeading;
-	$("p.txt").html(heading.magneticHeading);
+	$("p.txt").html("work"+heading.magneticHeading);
        $("#rtobj").css('-webkit-transform','rotate(' + arrowOrientation + 'deg)');
 	
     }
