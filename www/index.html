@@ -39,9 +39,10 @@
        
  <div class="app">
   
+<button id="btns">start compass</button>
               
-          <img id="rtobj" src ="comp.jpg" />
-         
+          <img id="rtobj"  style="width : 50%;height:50%" src ="comp.jpg" />
+         <p class="txt">...</p>
              
                
 </div>
@@ -63,23 +64,18 @@
 
 	var deg=0;
    	var watchID = null;
+	
 
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
+    
+      
+    
 
     // Start watching the compass
     //
     function startWatch() {
 
         // Update compass every 3 seconds
-        var options = { frequency: 50 };
+        var options = { frequency: 100 };
 
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
     }
@@ -99,6 +95,7 @@
        
        deg = heading.magneticHeading;
   	var arrowOrientation = 360 - heading.magneticHeading;
+	$("p.txt").html(heading.magneticHeading);
        $("#rtobj").css(
            '-webkit-transform','rotate(' + arrowOrientation + 'deg)'
        );
@@ -112,7 +109,7 @@
     }
 
 
-
+	$("btns").on("click"function(){startWatch});
 						
 
 
