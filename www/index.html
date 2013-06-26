@@ -65,7 +65,7 @@
 	var deg=0;
    	var watchID = null;
 	
-
+	$("btns").on("tap",function(){startWatch});
     
       
     
@@ -96,9 +96,7 @@
        deg = heading.magneticHeading;
   	var arrowOrientation = 360 - heading.magneticHeading;
 	$("p.txt").html(heading.magneticHeading);
-       $("#rtobj").css(
-           '-webkit-transform','rotate(' + arrowOrientation + 'deg)'
-       );
+       $("#rtobj").css('-webkit-transform','rotate(' + arrowOrientation + 'deg)');
 	
     }
 
@@ -109,7 +107,7 @@
     }
 
 
-	$("btns").on("tap"function(){startWatch});
+	
 						
 
 
