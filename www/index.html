@@ -39,7 +39,7 @@
        
  <div class="app">
   
-<a href="#" data-role="button" id="btns" data-theme="b">start compass</a>
+<button data-role="button" id="btns" data-theme="b">start compass</button>
 
 
               
@@ -64,10 +64,16 @@
    app.initialize();
         
 
-	var deg=0;
+	
+
+
+</script>
+    
+<script>
+	var deg=null;
    	var watchID = null;
 	
-	$("#btns").on("tap",function(){startWatch});
+startWatch();
     
       
     
@@ -111,11 +117,7 @@
 
 	
 						
-
-
-
 </script>
-    
 </body>
 
 </html>
