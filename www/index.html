@@ -39,7 +39,9 @@
        
  <div class="app">
   
-<button id="btns">start compass</button>
+<a data-role="button" id="btns" data-theme="b">start compass</a>
+
+
               
           <img id="rtobj"  style="width : 50%;height:50%" src ="comp.jpg" />
          <p class="txt">...</p>
@@ -65,7 +67,7 @@
 	var deg=0;
    	var watchID = null;
 	
-	$("btns").on("tap",function(){startWatch});
+	$("#btns").on("tap",function(){startWatch});
     
       
     
